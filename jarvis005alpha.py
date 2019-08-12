@@ -3,11 +3,9 @@
 
 """ JARVIS v005alpha
 
-El estado actual de este prototipo contiene los primeros módulos de
-obtención automatizada de fuentes, en concreto:
-    geo.eu.es.dsn.gob.es
-    geo.eu.es.defensa.gob.es.ccdc
-    geo.eu.es.exteriores.gob.es
+El estado actual de este prototipo contiene las siguientes estructuras
+    jarvis.estructura_ESN2017
+    jarvis.estructura_ODS2030
 	
 NOTA: esta versióin jarvis005a es una versión Alfa incompleta
       La última versión estable se encuentra en el siguiente enlace:
@@ -28,7 +26,7 @@ __author__ = "Rafael Ausejo Prieto"
 __authors__ = "Rafael Ausejo Prieto and Rafael Ausejo Prieto"
 __copyright__ = "(c) 2019 Rafael Ausejo Prieto"
 __credits__ = ["Rafael Ausejo Prieto", "Rafael Ausejo Prieto"]
-__date__ = "10/08/2019"
+__date__ = "12/08/2019"
 __license__ = "GPL"
 __version__ = "005a1"
 __maintainer__ = "Rafael Ausejo Prieto"
@@ -130,7 +128,7 @@ def main():
     print (f"[*] {now_time} Configuration starts")
     config = configparser.ConfigParser()
     config.read(f'jarvis.ini')
-    configuration = 'DEFAULT'
+    configuration = 'ODS2030'
     dir_base = config[configuration]['dir_base']
     print (f"[+] {dir_base}")
     jarvis_structure = config[configuration]['jarvis_structure']

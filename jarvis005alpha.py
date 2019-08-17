@@ -21,12 +21,12 @@ NOTA: esta versióin jarvis005a es una versión Alfa incompleta
 # from __future__ import futuros
 
 # Module Level Dunder Names
-__all__ = ['r', 'a', 'p']
+__all__ = ['02 bb', '5a 30', '5f ee','7d a8']
 __author__ = "Rafael Ausejo Prieto"
 __authors__ = "Rafael Ausejo Prieto and Rafael Ausejo Prieto"
 __copyright__ = "(c) 2019 Rafael Ausejo Prieto"
 __credits__ = ["Rafael Ausejo Prieto", "Rafael Ausejo Prieto"]
-__date__ = "12/08/2019"
+__date__ = "14/08/2019"
 __license__ = "GPL"
 __version__ = "005a1"
 __maintainer__ = "Rafael Ausejo Prieto"

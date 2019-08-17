@@ -1,5 +1,4 @@
-﻿TEST
-ods00_Objetivos_Desarrollo_Sostenible
+﻿ods00_Objetivos_Desarrollo_Sostenible
 ods01_Fin_de_la_Pobreza
 ods02_Hambre_Cero
 ods03_Salud_y_Bienestar

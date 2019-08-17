@@ -26,9 +26,9 @@ __author__ = "Rafael Ausejo Prieto"
 __authors__ = "Rafael Ausejo Prieto and Rafael Ausejo Prieto"
 __copyright__ = "(c) 2019 Rafael Ausejo Prieto"
 __credits__ = ["Rafael Ausejo Prieto", "Rafael Ausejo Prieto"]
-__date__ = "14/08/2019"
+__date__ = "17/08/2019"
 __license__ = "GPL"
-__version__ = "005a1"
+__version__ = "005a2"
 __maintainer__ = "Rafael Ausejo Prieto"
 __email__ = "rafael.ausejo@gmail.com"
 __status__ = "Prototype"
@@ -45,20 +45,22 @@ from datetime import datetime
 
 
 # Función jarvis_direccion(configuration)
-def jarvis_direccion(file,dir):
+def jarvis_direccion(file,dir_base):
     r""" Creates Planification Structure """ 
     # Lee la planificación y crea los directorios
     now_time = datetime.now()
     print (f"[*] {now_time} Starting structure creation")
-    print (f"[+] {dir}")
-#    os.chdir(f"{dir}")
+    print (f"[+] {dir_base}")
     with open(file, encoding='utf-8') as f:
-        for line in f:
-#        read_data = f.read()
-#        print(f"{read_data}")
-            line = line [0:len(line)-1]
-            line = f"{line}"
-            print(line)		
+        dir_path = f.readline().lstrip().rstrip()
+        while dir_path != '': 
+#        for line in f:
+#            line = line [0:len(line)-1]
+            directory = os.path.join(dir_base, dir_path)			
+            print(f"Creating directory: {directory}")
+            if not os.path.exists(directory):
+                os.makedirs(directory)
+            dir_path = f.readline().lstrip().rstrip()
     f.closed
     now_time = datetime.now()	
     print (f"[*] {now_time} Ending structure creation")    
@@ -128,6 +130,7 @@ def main():
     print (f"[*] {now_time} Configuration starts")
     config = configparser.ConfigParser()
     config.read(f'jarvis.ini')
+#    configuration = 'DEFAULT'
     configuration = 'ODS2030'
     dir_base = config[configuration]['dir_base']
     print (f"[+] {dir_base}")

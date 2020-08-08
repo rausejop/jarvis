@@ -1,0 +1,1 @@
+wget https://ejercito.defensa.gob.es/Galerias/multimedia/revista-ejercito/2020/952/accesible/revista_ejercito_julio_952.pdf
